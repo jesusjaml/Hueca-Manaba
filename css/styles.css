@@ -63,7 +63,6 @@ header .nav__list li a {
   letter-spacing: 0.1rem;
   font-size: 1.6rem;
   font-weight: 700;
-  text-decoration: none;
   transition: all 0.5s ease-in-out;
   position: relative;
 }
