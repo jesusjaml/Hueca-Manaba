@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Glory:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  font-family: "Glory", sans-serif;
+  font-size: 1.6rem;
+  background-color: #FAF8F7;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 12rem;
+  width: 100%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.151);
+}
+header .nav {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 1vh auto;
+}
+header .header__logo {
+  width: 100px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+header .header__logo:hover {
+  transform: translateY(-3px);
+}
+header .header__logo:active {
+  transform: translateY(3px);
+}
+header .nav__menu {
+  flex: 1;
+}
+header .nav__list {
+  display: flex;
+  gap: 38px;
+  justify-content: end;
+}
+header .nav__list li {
+  list-style: none;
+}
+header .nav__list li a {
+  letter-spacing: 0.1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+header .nav__list li a:before, header .nav__list li a:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0px;
+  height: 0.4rem;
+  margin: 5px 0 0;
+  transition: all 0.5s ease-in-out;
+  transition-duration: 0.5s;
+  opacity: 0;
+  background-color: #ffd400;
+}
+header .nav__list li a:hover {
+  color: #ffd400;
+}
+header .nav__list li a:hover:before, header .nav__list li a:hover:after {
+  width: 100%;
+  opacity: 1;
+}
+
+.main-container {
+  display: flex;
+  height: inherit;
+}
+.main-container .section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  max-width: 75%;
+}
+.main-container .items__slider {
+  display: flex;
+  gap: 90px;
+  width: 85%;
+  height: 500px;
+  padding: 0 60px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+.main-container .items__slider::-webkit-scrollbar {
+  height: 8px;
+}
+.main-container .items__slider::-webkit-scrollbar-thumb {
+  background-color: #ffd400;
+}
+.main-container .items-container__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  scroll-snap-align: center;
+  padding: 15px 15px;
+  height: 460px;
+  border-radius: 10px;
+  background-color: #ffff;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+}
+.main-container .items-container__card .plan-container__title {
+  letter-spacing: 1px;
+}
+.main-container .items-container__card .plan-container__img {
+  width: 200px;
+}
+.main-container .items-container__card .card-description {
+  text-align: center;
+}
+.main-container .items-container__card .card-cta {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+.main-container .items-container__card .card-cta .button {
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.main-container .items-container__card .card-cta .button:hover {
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+.main-container .items-container__card .card-cta .button:active {
+  transform: translateY(3px);
+}
+.main-container .items-container__card .card-cta .button .bx {
+  font-size: 3rem;
+}
+.main-container .aside {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 25%;
+  background-color: #f1f1f1;
+  font-weight: 700;
+}
+.main-container .aside .shopping-cart__container {
+  position: relative;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 25px 0;
+}
+.main-container .aside .shopping-cart__container .shopping-cart__title {
+  letter-spacing: 1px;
+}
+.main-container .aside .shopping-cart__container .shopping-cart__title::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #c8c8c8;
+  left: 0;
+  top: 55px;
+}
+.main-container .aside .shopping-cart__container .shopping-cart__title::before {
+  position: absolute;
+  content: "";
+  background-color: #c8c8c8;
+  width: 100%;
+  height: 2px;
+  bottom: 132px;
+}
+.main-container .aside .shopping-cart__description {
+  display: flex;
+  justify-content: space-between;
+}
+.main-container .aside .top-description {
+  padding-top: 20px;
+}
+.main-container .aside .shopping-details__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.main-container .aside .shopping-details__form .input {
+  padding: 10px 15px;
+  border: none;
+}
+.main-container .aside .shopping-details__form .button {
+  padding: 15px 15px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border: none;
+  background-color: #ffd400;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.main-container .aside .shopping-details__form .button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.301);
+}
+.main-container .aside .shopping-details__form .button:active {
+  transform: translateY(3px);
+}
+.main-container .aside .shopping-details__form .apply-button {
+  padding: 10px 15px;
+  margin-bottom: 50px;
+  align-self: flex-start;
+  border: none;
+  background-color: #ffff;
+}
+
+footer {
+  height: 8rem;
+  margin: auto 0 0 0;
+  outline: 2px solid #c8c8c8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-size: 1.6rem;
+}
+footer .form-terms__list {
+  display: flex;
+  gap: 16px;
+}
+footer .form-terms__list li a {
+  letter-spacing: 1px;
+  color: #000;
+}
+footer .form-terms__list li a:hover {
+  text-decoration: underline;
+}
+footer .footer-copyright p {
+  letter-spacing: 1px;
+}
+footer .footer-copyright p span {
+  color: red;
+}
+footer .footer-sm__container {
+  display: flex;
+  gap: 16px;
+}
+footer .footer-sm__container .bx {
+  font-size: 2.4rem;
+  transition: all 0.3s;
+}
+footer .footer-sm__container .bx:hover {
+  color: #ffd400;
+}
+
+/*# sourceMappingURL=styles.css.map */
