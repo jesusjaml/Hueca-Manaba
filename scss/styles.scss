@@ -213,15 +213,15 @@ header {
             margin: 25px 0;
             .shopping-cart__title {
                 letter-spacing: 1px;
-                &::after {
-                    position: absolute;
-                    content: '';
-                    width: 100%;
-                    height: 2px;
-                    background-color: #c8c8c8;
-                    left: 0;
-                    top: 55px;
-                }
+                // &::after {
+                //     position: absolute;
+                //     content: '';
+                //     width: 100%;
+                //     height: 2px;
+                //     background-color: #c8c8c8;
+                //     left: 0;
+                //     top: 55px;
+                // }
                 &::before {
                     position: absolute;
                     content: '';
@@ -320,6 +320,14 @@ footer {
         span {
             color: red;
         }
+        a {
+            font-weight: 700;
+            color: black;
+            transition: all 0.3s;
+            &:hover {
+                color: $primary-color;
+            }
+        }
     }
     .footer-sm__container {
         display: flex;
@@ -333,3 +341,52 @@ footer {
         }
     }
 }
+
+$small: 1024px;
+
+@media screen and (max-width: $small) {
+    body {
+        height: fit-content;
+    }
+    .nav__menu {
+        display: none;
+        border: 2px solid black;
+    }
+    .main-container {
+        flex-direction: column;
+        gap: 48px;
+    }
+    .section {
+        min-width: 100%;
+    }
+    .items__slider {
+        min-width: 320px;
+        max-width: 420px;
+        margin-top: 40px;
+        padding-left: 0;
+    }
+    .items-container__card {
+        min-width: 320px;
+    }
+    aside {
+        margin: 0 auto;
+        min-width: 320px;
+        max-width: 420px;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+        height: 250px;
+        margin: 80px 0 0 0;
+    }
+}
+// .items__slider {
+//     display: flex;
+//     gap: 90px;
+//     width: 85%;
+//     height: 500px;
+//     padding: 0 60px;
+//     overflow-x: scroll;
+//     overscroll-behavior-x: contain;
+//     scroll-snap-type: x proximity;
